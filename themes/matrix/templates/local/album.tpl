@@ -87,9 +87,10 @@
 
        {g->block type="core.GuestPreview" class="gbBlock"}
 
-       {* Edit link *}
-       <div><a href="{g->url arg1="view=core.ItemAdmin" arg2="subView=core.ItemEdit"
-		   arg3="itemId=`$item.id`" arg4="return=true"}">{g->text text="Edit"}</a></div>
+       {* Our emergency edit link, if the user removes all blocks containing edit links *}
+       {g->block type="core.EmergencyEditItemLink" class="gbBlock"
+                  checkSidebarBlocks=true
+                  checkAlbumBlocks=true}
 	
        {* Show any other album blocks (comments, etc) *}
        {foreach from=$theme.params.albumBlocks item=block}

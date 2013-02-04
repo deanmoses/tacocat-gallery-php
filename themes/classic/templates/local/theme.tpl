@@ -6,6 +6,7 @@
  *}
 <html>
   <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {* Let Gallery print out anything it wants to put into the <head> element *}
     {g->head}
 
@@ -21,7 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="{g->theme url="theme.css"}"/>
 	{/if}
 	<link rel="alternate" type="application/rss+xml" title="The Moses Family (RSS 2.0)" href="http://feeds.feedburner.com/mosii"/>
-	{include file="/home/deanmoses/themosii.com/pix/includes/tracking-head.inc"}
+	{include file="/home/deanmoses/includes/pix/tracking-head.inc"}
   </head>
   <body class="year{$theme.item.title|markup:strip} gallery">
     <div {g->mainDivAttributes}>
@@ -36,10 +37,25 @@
       {else}
 
       <div id="gsNavBar">
-		<h1>Dean, Lucie, Felix and Milo Moses</h1>
+		<h1>Dean, Lucie, Felix and Milo<span> Moses</span></h1>
+
+		<div id="searchbox">
+			<!-- Google CSE Search Box Begins -->
+			<form id="searchbox_009030535003140709893:vuhlzspqp1m" action="http://tacocat.com/pix/search.html">
+			  <input type="hidden" name="cx" value="009030535003140709893:vuhlzspqp1m" />
+			  <input name="q" type="text" size="20" />
+
+			  <input type="submit" name="sa" value="Search Site" />
+			  <input type="hidden" name="cof" value="FORID:9" />
+			</form>
+			<!-- Google CSE Search Box Ends -->
+		</div>
+
 		<div id="previousYears">
 			{capture name=banner assign=year}{$theme.item.title}{/capture}
-				<a {if $year eq "2011"}class="currentYear"{/if}href="/pictures/v/2011/">2011</a>
+				<a {if $year eq "2013"}class="currentYear"{/if}href="/pictures/v/2013/">2013</a>
+				| <a {if $year eq "2012"}class="currentYear"{/if}href="/pictures/v/2012/">2012</a>
+				| <a {if $year eq "2011"}class="currentYear"{/if}href="/pictures/v/2011/">2011</a>
 				| <a {if $year eq "2010"}class="currentYear"{/if}href="/pictures/v/2010/">2010</a>
 				| <a {if $year eq "2009"}class="currentYear"{/if}href="/pictures/v/2009/">2009</a>
 				| <a {if $year eq "2008"}class="currentYear"{/if}href="/pictures/v/2008/">2008</a>
@@ -53,17 +69,6 @@
 				| <a href="/pix/1973/dean/index.php">1973</a>
 		</div>
 		
-		<div id="searchbox">
-			<!-- Google CSE Search Box Begins -->
-			<form id="searchbox_009030535003140709893:vuhlzspqp1m" action="http://tacocat.com/pix/search.html">
-			  <input type="hidden" name="cx" value="009030535003140709893:vuhlzspqp1m" />
-			  <input name="q" type="text" size="20" />
-
-			  <input type="submit" name="sa" value="Search Site" />
-			  <input type="hidden" name="cof" value="FORID:9" />
-			</form>
-			<!-- Google CSE Search Box Ends -->
-		</div>
       </div>
 
       {* Include the appropriate content type for the page we want to draw. *}

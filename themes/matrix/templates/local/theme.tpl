@@ -7,6 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     {* Let Gallery print out anything it wants to put into the <head> element *}
     {g->head}
 
@@ -22,6 +23,8 @@
     {if !empty($theme.item.description)}
 	<meta name="description" content="{$theme.item.description|markup:strip}" />
     {/if}
+    
+    <link rel="alternate" type="application/rss+xml" title="The Moses Family (RSS 2.0)" href="http://feeds.feedburner.com/mosii"/>
 
     {* Include this theme's style sheet *}
 	{if $theme.pageType == 'admin'}
@@ -29,10 +32,20 @@
 	{else}
 	<link rel="stylesheet" type="text/css" href="{g->theme url="theme.css"}"/>
 	{/if}
-	<link rel="alternate" type="application/rss+xml" title="The Moses Family (RSS 2.0)" href="http://feeds.feedburner.com/mosii"/>
-	{include file="/home/deanmoses/themosii.com/pix/includes/tracking-head.inc"}
+	<style>
+			.thumbnails {ldelim} 
+				max-width: 700px;
+			{rdelim}
+
+			.thumbnail {ldelim} 
+				display: inline-block;
+				vertical-align: top;
+				margin: 5px;
+			{rdelim}
+	</style>
+	{include file="/home/deanmoses/includes/pix/tracking-head.inc"}
   </head>
-  <body class="gallery">
+  <body class="gallery {$theme.pageType}">
     <div {g->mainDivAttributes}>
       {*
        * Some module views (eg slideshow) want the full screen.  So for those, we
@@ -46,33 +59,35 @@
       </div>
 
       <div id="gsNavBar">
-
-
-	<div class="gbBreadCrumb">
-	  {g->block type="core.BreadCrumb"}
-	</div>
+		<div class="gbBreadCrumb">
+			{g->block type="core.BreadCrumb"}
+		</div>
       </div>
 
       {* Include the appropriate content type for the page we want to draw. *}
       {if $theme.pageType == 'album'}
-	{g->theme include="album.tpl"}
+		{g->theme include="album.tpl"}
       {elseif $theme.pageType == 'photo'}
-	{g->theme include="photo.tpl"}
+		{g->theme include="photo.tpl"}
       {elseif $theme.pageType == 'admin'}
-	{g->theme include="admin.tpl"}
+		{g->theme include="admin.tpl"}
       {elseif $theme.pageType == 'module'}
-	{g->theme include="module.tpl"}
+		{g->theme include="module.tpl"}
       {elseif $theme.pageType == 'progressbar'}
-	{g->theme include="progressbar.tpl"}
+		{g->theme include="progressbar.tpl"}
       {/if}
 
-      <div id="gsFooter">
-		<div class="gbSystemLinks">
-		  {g->block type="core.SystemLinks"
-			    order="core.SiteAdmin core.YourAccount core.Login core.Logout"
-			    othersAt=4}
-		</div>
-      </div>
+		{* Include the footer & login links on all pages except the photo page. *}
+      	{if $theme.pageType != 'photo'}
+	      <div id="gsFooter">
+			<div class="gbSystemLinks">
+			  {g->block type="core.SystemLinks"
+				    order="core.SiteAdmin core.YourAccount core.Login core.Logout"
+				    othersAt=4}
+			</div>
+	      </div>
+	    {/if}
+      
       {/if}  {* end of full screen check *}
     </div>
 

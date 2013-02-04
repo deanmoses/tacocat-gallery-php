@@ -11,7 +11,7 @@
 		{if !empty($theme.item.title)}
 			{capture name=banner assign=firstsFile}{$theme.item.title}{/capture}
 			{if $firstsFile|count_characters eq 4}
-	  			{include file="/home/deanmoses/$firstsFile.tpl"}
+	  			{include file="/home/deanmoses/includes/pix/firsts/$firstsFile.tpl"}
 			{/if}
 		{/if}
     </td>
@@ -145,8 +145,9 @@
               {/section}
             </tr>
 
+			{* If we're not on a year album, assume we're on the root album.  Include thumbs of all the years prior to using the gallery software. *}
 			{if $firstsFile|count_characters != 4}
-	  			{include file="/home/deanmoses/picture_index_include.tpl"}
+	  			{include file="/home/deanmoses/includes/pix/picture_index_include.tpl"}
 			{/if}
 
           </table>

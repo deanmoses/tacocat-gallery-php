@@ -22,7 +22,6 @@ div#searchbox {
 	border: solid black 1px !important;
 }
 
-
 /* ********************************************************************************
  * Building blocks
  * h2, h3, p, etc        Standard html tags
@@ -77,7 +76,8 @@ div#searchbox {
 
 #gsNavBar div.gbBreadCrumb {
     margin: 0;
-    padding: 4px 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
 
 table.gbDataTable {
@@ -162,6 +162,7 @@ img.giThumbnail {
 .thumbnailTitle {
 	padding: 0 !important;
 	margin: 0 !important;
+	max-width: 100px;
 }
 
 #gallery td.giAlbumCell select, #gallery td.giItemCell select {
@@ -275,7 +276,7 @@ body.gallery {
 	font-size: 12pt !important;
 	padding: 0.3em; /* to add some space around the album's overall description */
 	padding-top: 1em; /* to add some space around the album's overall description */
-	width: 670px; /* to restrict width to 6 thumbnails */
+	max-width: 670px; /* to restrict width to 6 thumbnails */
 }
 
 /* moses added */
@@ -343,7 +344,6 @@ body.gallery {
 #gsNavBar div.gbBreadCrumb {
     font-size: 1.1em;
     font-weight: bold;
-    text-align: right;
 }
 
 #gsNavBar div.gbBreadCrumb a, #gsNavBar div.gbBreadCrumb span {
@@ -718,4 +718,70 @@ td.bsw_BlockCommands {
 }
 #gsThumbMatrix .giRatingAverageContainer {
     margin: auto;
+}
+
+
+
+#left-box {
+				text-align: left;
+				font-size: 16px;
+				margin-left: 1em;
+				margin-right: 1em;
+				margin-top: 40px;
+				float: left;
+				max-width: 350px
+}
+			
+			#right-box {
+				margin-left: 360px;
+				max-width: 1120px;
+}
+#nav-buttons {
+				text-align: right;
+				width: 95%;
+				max-width: {$theme.item.width}px;
+} 
+			
+			.gsImageView {
+				padding: 0;
+}
+			
+			#the-photo {
+				display: block;
+				width: 95%;
+				max-width: {$theme.item.width}px;  
+				height: auto;
+}
+
+#gsNavBar div.gbBreadCrumb {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+/* media queries */
+
+@media screen and (min-width:730px) {
+	#gsNavBar div.gbBreadCrumb {
+		text-align: right;
+	}
+}
+
+@media screen and (max-width:730px) {
+	div#searchbox, body.album .BreadCrumb-3 {
+		display: none;
+	}
+}
+
+@media screen and (max-width:880px) {
+	#left-box {
+		float: none;
+		max-width: 100%;
+	}
+	#right-box {
+		margin-left: 0;
+	}
+	#the-photo, #nav-buttons {
+		width: 100%;
+	}
 }

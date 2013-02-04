@@ -3,8 +3,24 @@ h1 {
     font-weight: bold;
 }
 
-div#searchbox {
-	margin-top: 5px;
+#searchbox {
+	position: absolute;
+	top: 0;
+	right: 5px;
+}
+
+#searchbox input {
+	min-height: 1.8em;
+}
+
+#searchbox input[type="submit"] {
+	border: solid gray 1px;
+	background: lightgray;
+	margin-left: -5px;
+}
+
+#searchbox input[type="text"] {
+	border: solid gray 1px;
 }
 
 div.one-image {
@@ -134,7 +150,6 @@ body.gallery img {
 }
 
 #gallery {
-    width:600px;
 	border: solid black 1px;
 	background-color: #fff;
 }
@@ -402,6 +417,7 @@ div.gbTabBar span.o {
     background-color: #FFE793;
     border-bottom: solid black 1px;
     padding: 5px;
+	position: relative;
 }
 
 #gsNavBar h1 {
@@ -623,7 +639,6 @@ td.bsw_BlockCommands {
 
 #gsFooter {
   padding-top: 4px;
-  width: 600px;
 }
 
 #firsts {
@@ -639,19 +654,75 @@ a.currentYear, a.currentYear:link, a.currentYear:hover {
 	text-decoration: none;
 }
 
+/* media queries */
+
+@media screen and (max-width:500px) {
+	#gsNavBar h1 span {
+		display: none;
+	}
+}
+
+@media screen and (max-width:530px) {
+	#gsSidebarCol {
+		display: none;
+	}
+}
+
+@media screen and (max-width:675px) {
+	#searchbox {
+		display: none;
+	}
+}
+
 /* colors for each year -- overrides colors above */
+
+/* 2013 */
+body.year2013 {
+	background-color: #917d61;
+}
+body.year2013 #gsSidebarCol {
+	/* side column */
+    background-color: #8a9e75;
+}
+
+body.year2013 #gsNavBar {
+	/* top banner */
+    background-color: #b7c8a4;
+}
+body.year2013 a {
+	color: #7e684a;
+}
+
+body.year2013 #previousYears a {
+	color: #685233;
+}
+
+/* 2012 */
+body.year2012 {
+	background-color: #973450;
+}
+body.year2012 #gsSidebarCol {
+	/* side column */
+    background-color: #e77f4b;
+}
+
+body.year2012 #gsNavBar {
+	/* top banner */
+    background-color: #edb79c;
+}
+body.year2012 a {
+	color: #973450;
+}
 
 /* 2011 */
 body.year2011 {
 	background-color: #4d3087;
 }
 body.year2011 #gsSidebarCol {
-	/* side column */
     background-color: #c2d543;
 }
 
 body.year2011 #gsNavBar {
-	/* top banner */
     background-color: #e0ee83;
 }
 body.year2011 a {

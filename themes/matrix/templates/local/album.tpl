@@ -45,27 +45,13 @@
          </h3>
        </div>
        {else}
-
-       {assign var="childrenInColumnCount" value=0}
-         <table id="gsThumbMatrix">
-           <tr valign="top">
-             {foreach from=$theme.children item=child}
-
-             {* Move to a new row *}
-             {if ($childrenInColumnCount == $theme.params.columns)}
-           </tr>
-           <tr valign="top">
-             {assign var="childrenInColumnCount" value=0}
-             {/if}
-
-      {assign var=childrenInColumnCount value="`$childrenInColumnCount+1`"}
-      <td class="{if $child.canContainChildren}giAlbumCell gcBackground1{else}giItemCell{/if}"
-	  style="width: {$child.thumbnail.width}px">
-
+       		<div class="thumbnails">
+				{foreach from=$theme.children item=child}
+					<div class="thumbnail">
 	  {if isset($child.thumbnail)}
-	    <a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}">
-	      {g->image item=$child image=$child.thumbnail class="giThumbnail" alt=`$child.title` longdesc=" "}
-	    </a>
+		<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}">
+			{g->image item=$child image=$child.thumbnail class="giThumbnail" alt=`$child.title` longdesc=" "}
+		</a>
 	  {else}
 	    <a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}"
 	       class="giMissingThumbnail">
@@ -88,15 +74,9 @@
                {assign var="showOwner" value=false}
                {/if}
 
-             </td>
+             </div>
              {/foreach}
-
-             {* flush the rest of the row with empty cells *}
-             {section name="flush" start=$childrenInColumnCount loop=$theme.params.columns}
-             <td>&nbsp;</td>
-             {/section}
-           </tr>
-         </table>
+			</div>
        {/if}
 
        {if !empty($theme.navigator)}
@@ -107,11 +87,10 @@
 
        {g->block type="core.GuestPreview" class="gbBlock"}
 
-       {* Emergency edit link, if the user all blocks containing edit links *}
-	{g->block type="core.EmergencyEditItemLink" class="gbBlock"
-                 checkSidebarBlocks=true
-                 checkAlbumBlocks=true}
-
+       {* Edit link *}
+       <div><a href="{g->url arg1="view=core.ItemAdmin" arg2="subView=core.ItemEdit"
+		   arg3="itemId=`$item.id`" arg4="return=true"}">{g->text text="Edit"}</a></div>
+	
        {* Show any other album blocks (comments, etc) *}
        {foreach from=$theme.params.albumBlocks item=block}
          {g->block type=$block.0 params=$block.1}

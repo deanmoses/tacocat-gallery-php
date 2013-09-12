@@ -130,6 +130,9 @@ body.gallery {
 
 #gsNavBar {
     border-top-width: 1px;
+}
+
+.album #gsNavBar {
 	float: right;
 }
 

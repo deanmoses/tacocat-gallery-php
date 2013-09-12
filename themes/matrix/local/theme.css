@@ -130,6 +130,7 @@ body.gallery {
 
 #gsNavBar {
     border-top-width: 1px;
+	float: right;
 }
 
 #gsNavBar div.gbSystemLinks {

@@ -6,17 +6,6 @@
  *}
 <h2 style="float:left" id="albumTitle">{$theme.item.title|markup}, {g->date format="%Y" timestamp=$theme.item.originationTimestamp}</h2>
 
-<div id="searchbox" style="text-align:right">
-	<!-- Google CSE Search Box Begins -->
-	<form id="searchbox_009030535003140709893:vuhlzspqp1m" action="/pix/search.html">
-		<input name="cx" value="009030535003140709893:vuhlzspqp1m" type="hidden">
-		<input name="q" size="20" type="text">
-		<input name="sa" value="Search Site" type="submit">
-		<input name="cof" value="FORID:9" type="hidden">
-	</form>
-	<!-- Google CSE Search Box Ends -->
-</div>
-
 <div style="clear:both"> </div>
 
 <div class="albumSeparator"> </div>

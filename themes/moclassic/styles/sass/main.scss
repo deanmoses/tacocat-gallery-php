@@ -16,6 +16,7 @@ $base-line-height: 1.4em;
 
 $headerColor: #111;
 $headerBackgroundColor: #b7c8a4;
+$firstsBackgroundColor: #8a9e75;
 
 header {
 	color: $headerColor;
@@ -26,17 +27,23 @@ header {
 	    font-size: 1.8em;
 	    line-height: 1.8em;
 	    letter-spacing: -.02em;
+	    float: left;
+    }
+    
+    #searchbox {
+		text-align: right;
     }
 
+	// clears the float without adding markup
+	.years:before {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	
 	.years {
-		// clears the float without adding markup
-		:before {
-			content: ".";
-			display: block;
-			height: 0;
-			clear: both;
-			visibility: hidden;
-		}
 		// separator between each year
 		span:after {
    			content: "|";
@@ -44,3 +51,23 @@ header {
 	}
 }
 
+.firsts {
+	display: table-cell;
+	table-layout: fixed;
+	vertical-align: top;
+	width: 15em;
+	background-color: $firstsBackgroundColor;
+	overflow: hidden;
+}
+
+.thumbnails {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.thumbnail {
+	display: inline-block;
+	a {
+		display: block;
+	}
+}

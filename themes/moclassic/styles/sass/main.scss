@@ -13,33 +13,12 @@ header {
         font-family: 'VAGRoundedBT-Regular';
 	    font-size: 1.8em;
 	    letter-spacing: -.02em;
-        cursor: pointer;
+	    text-rendering: optimizeLegibility
     }
 
-    .header-primary {
-        position: relative;
-        padding: 1em;
-        background-color: $colorDarkGraySecondary;
-        border-top: 1px solid rgba(255,255,255,.1);
-        border-bottom: 1px solid $colorBorderDarkPrimary;
-    }
-
-    .header-secondary {
-        padding: .75em 1em;
-        background-color: $colorDarkGrayPrimary;
-        border-bottom: 1px solid $colorBorderDarkPrimary;
-    }
-    
 	.years {
-		color: $titleColor;
-
 		span:after {
    			content: "|";
-   			color: #666;
-   		}
-   		
-   		a:hover {
-	   		cursor: pointer;
    		}
 	}
 }

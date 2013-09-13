@@ -79,18 +79,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-/* line 22, ../sass/main.scss */
+/* line 23, ../sass/main.scss */
 html, body {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-family: HelveticaNeue, Arial, sans-serif;
+  font-size: 14px;
 }
 
-/* line 27, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 header {
   color: #111111;
   background-color: #b7c8a4;
 }
-/* line 31, ../sass/main.scss */
+/* line 32, ../sass/main.scss */
 header h1 {
   font-family: 'VAGRoundedBT-Regular';
   font-size: 1.8em;
@@ -98,11 +98,11 @@ header h1 {
   letter-spacing: -.02em;
   float: left;
 }
-/* line 39, ../sass/main.scss */
+/* line 40, ../sass/main.scss */
 header #searchbox {
   text-align: right;
 }
-/* line 44, ../sass/main.scss */
+/* line 45, ../sass/main.scss */
 header .years:before {
   content: ".";
   display: block;
@@ -110,12 +110,12 @@ header .years:before {
   clear: both;
   visibility: hidden;
 }
-/* line 54, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 header .years span:after {
   content: "|";
 }
 
-/* line 60, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 .firsts {
   display: table-cell;
   table-layout: fixed;
@@ -125,18 +125,24 @@ header .years span:after {
   overflow: hidden;
 }
 
-/* line 69, ../sass/main.scss */
+/* line 70, ../sass/main.scss */
 .thumbnails {
   display: table-cell;
   vertical-align: top;
 }
 
-/* line 74, ../sass/main.scss */
+/* line 75, ../sass/main.scss */
 .thumbnail {
   display: inline-block;
   vertical-align: top;
 }
-/* line 77, ../sass/main.scss */
+/* line 78, ../sass/main.scss */
+.thumbnail a.title {
+  font-weight: bold;
+}
+/* line 81, ../sass/main.scss */
 .thumbnail a {
   display: block;
+  text-decoration: none;
+  color: black;
 }

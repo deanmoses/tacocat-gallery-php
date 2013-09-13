@@ -4,10 +4,11 @@ $regular: 400;
 $bold: 600;
 
 // Base Font
-$base-font-family: Verdana, Arial, Helvetica, sans-serif;
+$base-color: #000;
+$base-font-family: HelveticaNeue, Arial, sans-serif;
 $base-font-weight: $regular;
-$base-font-size: 1em;
-$base-line-height: 1.4em;
+$base-font-size: 14px;
+$base-line-height: 14px;
 
 @import "compass/reset";
 @import "compass/css3"; // CSS mixins like border-radius http://compass-style.org/reference/compass/css3/
@@ -74,7 +75,12 @@ header {
 .thumbnail {
 	display: inline-block;
 	vertical-align: top;
+	a.title {
+		font-weight: bold;
+	}
 	a {
 		display: block;
+		text-decoration: none;
+		color: $base-color;
 	}
 }

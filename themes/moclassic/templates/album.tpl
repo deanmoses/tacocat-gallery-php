@@ -18,7 +18,7 @@
 			<article class="thumbnail">
 				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}">{g->image item=$child image=$child.thumbnail}</a>
 				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}" style="width:100px" class="title">{$child.originationTimestamp|date_format:"%B %e"}</a>
-				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}">{$child.title|default:$child.pathComponent|markup}</a>
+				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}">{$child.title|markup}</a>
 				 {if !empty($child.summary)}
 	                <p class="summary">{$child.summary|entitytruncate:256|markup}</p>
 	             {/if}

@@ -18,8 +18,9 @@
 	{* Let Gallery print out anything it wants to put into the <head> element *}
 	{g->head}
 
-
-
+	{* This theme's stylesheet *}
+	<link rel="stylesheet" type="text/css" href="{g->theme url="styles/stylesheets/main.css"}">
+	
 	{* RSS link *}
 	<link rel="alternate" type="application/rss+xml" title="The Moses Family (RSS 2.0)" href="http://feeds.feedburner.com/mosii"/>
 </head>
@@ -41,20 +42,20 @@
 
 		<nav class="years">
 			{capture name=banner assign=year}{$theme.item.title}{/capture}
-			<a {if $year eq "2013"}class="currentYear"{/if}href="/pictures/v/2013/">2013</a>
-			| <a {if $year eq "2012"}class="currentYear"{/if}href="/pictures/v/2012/">2012</a>
-			| <a {if $year eq "2011"}class="currentYear"{/if}href="/pictures/v/2011/">2011</a>
-			| <a {if $year eq "2010"}class="currentYear"{/if}href="/pictures/v/2010/">2010</a>
-			| <a {if $year eq "2009"}class="currentYear"{/if}href="/pictures/v/2009/">2009</a>
-			| <a {if $year eq "2008"}class="currentYear"{/if}href="/pictures/v/2008/">2008</a>
-			| <a {if $year eq "2007"}class="currentYear"{/if}href="/pictures/v/2007/">2007</a>
-			| <a href="/pix/2006/index.php">2006</a>
-			| <a href="/pix/2005/index.php">2005</a>
-			| <a href="/pix/2004/index.php">2004</a>
-			| <a href="/pix/2003/index.php">2003</a>
-			| <a href="/pix/2002/index.php">2002</a>
-			| <a href="/pix/2001/index.php">2001</a>
-			| <a href="/pix/1973/dean/index.php">1973</a>
+			<a {if $year eq "2013"}class="currentYear"{/if}href="/pictures/v/2013/">2013</a> <span></span>
+			<a {if $year eq "2012"}class="currentYear"{/if}href="/pictures/v/2012/">2012</a> <span></span>
+			<a {if $year eq "2011"}class="currentYear"{/if}href="/pictures/v/2011/">2011</a> <span></span>
+			<a {if $year eq "2010"}class="currentYear"{/if}href="/pictures/v/2010/">2010</a> <span></span>
+			<a {if $year eq "2009"}class="currentYear"{/if}href="/pictures/v/2009/">2009</a> <span></span>
+			<a {if $year eq "2008"}class="currentYear"{/if}href="/pictures/v/2008/">2008</a> <span></span>
+			<a {if $year eq "2007"}class="currentYear"{/if}href="/pictures/v/2007/">2007</a> <span></span>
+			<a href="/pix/2006/index.php">2006</a> <span></span>
+			<a href="/pix/2005/index.php">2005</a> <span></span>
+			<a href="/pix/2004/index.php">2004</a> <span></span>
+			<a href="/pix/2003/index.php">2003</a> <span></span>
+			<a href="/pix/2002/index.php">2002</a> <span></span>
+			<a href="/pix/2001/index.php">2001</a> <span></span>
+			<a href="/pix/1973/dean/index.php">1973</a>
 		</nav>
 
 	</header>

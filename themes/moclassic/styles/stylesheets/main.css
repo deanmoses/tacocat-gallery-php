@@ -1,0 +1,115 @@
+/* line 17, ../../../../../../../Users/dmoses/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Users/dmoses/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Users/dmoses/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Users/dmoses/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Users/dmoses/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Users/dmoses/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Users/dmoses/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Users/dmoses/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Users/dmoses/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'Icons';
+  src: url("../../fonts/icons/icomoon.eot");
+  src: url("../../fonts/icons/icomoon.eot?#iefix") format("embedded-opentype"), url("../../fonts/icons/icomoon.woff") format("woff"), url("../../fonts/icons/icomoon.ttf") format("truetype"), url("../../fonts/icons/icomoon.svg#Icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VAGRoundedBT-Regular';
+  src: url("../../fonts/vag/ECAC0_0.eot");
+  src: url("../../fonts/vag/ECAC0_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/vag/ECAC0_0.woff") format("woff"), url("../../fonts/vag/ECAC0_0.ttf") format("truetype"), url("../../fonts/vag/ECAC0_0.svg#VAGRoundedBT-Regula") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 12, ../sass/main.scss */
+header h1 {
+  font-family: 'VAGRoundedBT-Regular';
+  font-size: 1.8em;
+  letter-spacing: -.02em;
+  cursor: pointer;
+}
+/* line 19, ../sass/main.scss */
+header .header-primary {
+  position: relative;
+  padding: 1em;
+  background-color: #777777;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #222222;
+}
+/* line 27, ../sass/main.scss */
+header .header-secondary {
+  padding: .75em 1em;
+  background-color: #999999;
+  border-bottom: 1px solid #222222;
+}
+/* line 33, ../sass/main.scss */
+header .years {
+  color: white;
+}
+/* line 36, ../sass/main.scss */
+header .years :not(:last-child):after {
+  content: " | ";
+  color: #666;
+}
+/* line 41, ../sass/main.scss */
+header .years a:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,45 @@
+@import "compass/reset";
+@import "compass/css3"; // CSS mixins like border-radius http://compass-style.org/reference/compass/css3/
+@import "fonts";
+@import "years";
+
+$titleColor: #fff; 
+$colorDarkGrayPrimary: #999;
+$colorBorderDarkPrimary: #222;
+$colorDarkGraySecondary: #777;
+
+header {
+	h1 {
+        font-family: 'VAGRoundedBT-Regular';
+	    font-size: 1.8em;
+	    letter-spacing: -.02em;
+        cursor: pointer;
+    }
+
+    .header-primary {
+        position: relative;
+        padding: 1em;
+        background-color: $colorDarkGraySecondary;
+        border-top: 1px solid rgba(255,255,255,.1);
+        border-bottom: 1px solid $colorBorderDarkPrimary;
+    }
+
+    .header-secondary {
+        padding: .75em 1em;
+        background-color: $colorDarkGrayPrimary;
+        border-bottom: 1px solid $colorBorderDarkPrimary;
+    }
+    
+	.years {
+		color: $titleColor;
+
+		span:after {
+   			content: "|";
+   			color: #666;
+   		}
+   		
+   		a:hover {
+	   		cursor: pointer;
+   		}
+	}
+}

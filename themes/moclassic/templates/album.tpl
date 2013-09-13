@@ -16,7 +16,7 @@
 <section class="thumbnails">
 	{assign var="prevMonth" value=""}
 	{foreach from=$theme.children item=child}
-		{assign var="curMonth" value="$child.originationTimestamp}
+		{assign var=curMonth value=$child.originationTimestamp|date_format:"%B"}
 		Current month: {$curMonth}
 	
 			<article class="thumbnail" style="width: {$child.thumbnail.width}px">

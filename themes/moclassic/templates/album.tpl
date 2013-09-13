@@ -14,22 +14,22 @@
 		{/if}
 </section>
 <section class="thumbnails">
-	{assign var=prevMonth value=""}
+	{assign var=prevMonth value="13"}
 	{foreach from=$theme.children item=child}
 		{assign var=curMonth value=$child.originationTimestamp|date_format:"%m"}
-		{if curMonth > prevMonth}
+		{if $curMonth < $prevMonth}
 			{assign var=prevMonth value=$curMonth}
-			New month:  {$curMonth}
-		{/fi}
-	
-			<article class="thumbnail" style="width: {$child.thumbnail.width}px">
-				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}">{g->image item=$child image=$child.thumbnail}</a>
-				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}" class="title">{$child.originationTimestamp|date_format:"%B %e"}</a>
-				 {if !empty($child.summary)}
-					<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}" class="summary">{$child.summary|entitytruncate:256|markup}</a>
-	             {/if}
-			</article>
-	  {/foreach}
+			<div class="month">{$child.originationTimestamp|date_format:"%B"}</div>
+		{/if}
+
+		<article class="thumbnail" style="width: {$child.thumbnail.width}px">
+			<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}">{g->image item=$child image=$child.thumbnail}</a>
+			<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}" class="title">{$child.originationTimestamp|date_format:"%B %e"}</a>
+			{if !empty($child.summary)}
+				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}" class="summary">{$child.summary|entitytruncate:256|markup}</a>
+			{/if}
+		</article>
+	{/foreach}
 </section> {* end thumbnails *}
 
 {* Emergency edit link, if the user removes all blocks containing edit links *}

@@ -18,6 +18,12 @@ $headerColor: #111;
 $headerBackgroundColor: #b7c8a4;
 $firstsBackgroundColor: #8a9e75;
 
+
+html, body {
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+}
+
 header {
 	color: $headerColor;
 	background-color: $headerBackgroundColor;

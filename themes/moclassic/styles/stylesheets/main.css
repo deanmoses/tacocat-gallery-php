@@ -151,3 +151,11 @@ header .years span:after {
   text-decoration: none;
   color: black;
 }
+
+/* line 92, ../sass/main.scss */
+.month {
+  height: 2em;
+  line-height: 2em;
+  font-weight: bold;
+  background-color: #eee;
+}

@@ -18,11 +18,15 @@ $base-line-height: 14px;
 $headerColor: #111;
 $headerBackgroundColor: #b7c8a4;
 $firstsBackgroundColor: #8a9e75;
-
+$bodyBackgroundColor: #b1ceb3;
 
 html, body {
 	font-family: $base-font-family;
 	font-size: $base-font-size;
+}
+
+body {
+	background-color: $bodyBackgroundColor;
 }
 
 header {

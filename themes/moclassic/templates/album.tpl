@@ -14,7 +14,11 @@
 		{/if}
 </section>
 <section class="thumbnails">
+	{assign var="prevMonth" value=""}
 	{foreach from=$theme.children item=child}
+		{assign var="curMonth" value="$child.originationTimestamp|date_format:'%e'"}
+		Current month: {$curMonth}
+	
 			<article class="thumbnail" style="width: {$child.thumbnail.width}px">
 				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}">{g->image item=$child image=$child.thumbnail}</a>
 				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}" class="title">{$child.originationTimestamp|date_format:"%B %e"}</a>

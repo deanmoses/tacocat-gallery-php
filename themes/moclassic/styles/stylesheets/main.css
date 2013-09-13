@@ -121,6 +121,12 @@ header .years span:after {
 }
 
 /* line 65, ../sass/main.scss */
+.main-container {
+  width: 100%;
+  display: table;
+}
+
+/* line 70, ../sass/main.scss */
 .firsts {
   display: table-cell;
   table-layout: fixed;
@@ -129,30 +135,38 @@ header .years span:after {
   background-color: #8a9e75;
   overflow: hidden;
 }
+/* line 78, ../sass/main.scss */
+.firsts p {
+  padding-bottom: .5em;
+}
+/* line 81, ../sass/main.scss */
+.firsts p em {
+  font-style: italic;
+}
 
-/* line 74, ../sass/main.scss */
+/* line 87, ../sass/main.scss */
 .thumbnails {
   display: table-cell;
   vertical-align: top;
 }
 
-/* line 79, ../sass/main.scss */
+/* line 92, ../sass/main.scss */
 .thumbnail {
   display: inline-block;
   vertical-align: top;
 }
-/* line 82, ../sass/main.scss */
+/* line 95, ../sass/main.scss */
 .thumbnail a.title {
   font-weight: bold;
 }
-/* line 85, ../sass/main.scss */
+/* line 98, ../sass/main.scss */
 .thumbnail a {
   display: block;
   text-decoration: none;
   color: black;
 }
 
-/* line 92, ../sass/main.scss */
+/* line 105, ../sass/main.scss */
 .month {
   height: 2em;
   line-height: 2em;

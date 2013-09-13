@@ -1,1 +1,18 @@
 login.txt
+.sass-cache/
+
+# Numerous always ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.vi
+*~
+*.sass-cache
+*.ruby-version
+
+# OS or editor folders
+.DS_Store
+._*
+.tmproj

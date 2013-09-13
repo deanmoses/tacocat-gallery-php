@@ -14,15 +14,18 @@
 		{/if}
 </section>
 <section class="thumbnails">
+	<style>
+		.thumbnail {
+			width: {$child.thumbnail.width}px
+		}
+	</style>
 	{foreach from=$theme.children item=child}
 			<article class="thumbnail">
 				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}">{g->image item=$child image=$child.thumbnail}</a>
-				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}" style="width:100px" class="title">{$child.originationTimestamp|date_format:"%B %e"}</a>
-				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}">{$child.title|markup}</a>
+				<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}" class="title">{$child.originationTimestamp|date_format:"%B %e"}</a>
 				 {if !empty($child.summary)}
-	                <p class="summary">{$child.summary|entitytruncate:256|markup}</p>
+					<a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$child.id`"}" class="summary">{$child.summary|entitytruncate:256|markup}</a>
 	             {/if}
-
 			</article>
 	  {/foreach}
 </section> {* end thumbnails *}

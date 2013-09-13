@@ -79,14 +79,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-/* line 12, ../sass/main.scss */
+/* line 20, ../sass/main.scss */
+header {
+  color: #111111;
+  background-color: #b7c8a4;
+}
+/* line 24, ../sass/main.scss */
 header h1 {
   font-family: 'VAGRoundedBT-Regular';
   font-size: 1.8em;
+  line-height: 1.8em;
   letter-spacing: -.02em;
-  text-rendering: optimizeLegibility;
 }
-/* line 20, ../sass/main.scss */
+/* line 33, ../sass/main.scss */
+header .years :before {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 41, ../sass/main.scss */
 header .years span:after {
   content: "|";
 }

@@ -128,8 +128,9 @@ header .years span:after {
 /* line 68, ../sass/main.scss */
 .thumbnail {
   display: inline-block;
+  vertical-align: top;
 }
-/* line 70, ../sass/main.scss */
+/* line 71, ../sass/main.scss */
 .thumbnail a {
   display: block;
 }

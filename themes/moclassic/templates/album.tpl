@@ -16,7 +16,7 @@
 <section class="thumbnails">
 	<style>
 		.thumbnail {
-			width: {$child.thumbnail.width}px
+			width: {$child.thumbnail.width}px;
 		}
 	</style>
 	{foreach from=$theme.children item=child}
